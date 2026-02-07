@@ -1,0 +1,50 @@
+2026-02-07 18:42:53,967 - Free Scan: 0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39
+2026-02-07 18:43:39,988 - Free Scan: 0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39
+2026-02-07 18:50:11,549 - Free Scan: 0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39
+2026-02-07 18:50:58,968 - Free Scan: 0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39
+2026-02-07 18:51:24,427 - Free Scan: 0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39
+2026-02-07 18:54:47,723 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans?select=%2A&user_id=eq.5fd52c37-f89a-431e-8621-527ea346eb02&contract_address=eq.0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39 "HTTP/2 200 OK"
+2026-02-07 18:54:48,095 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?select=%2A&id=eq.5fd52c37-f89a-431e-8621-527ea346eb02 "HTTP/2 200 OK"
+2026-02-07 18:54:48,517 - HTTP Request: PATCH https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?id=eq.5fd52c37-f89a-431e-8621-527ea346eb02 "HTTP/2 200 OK"
+2026-02-07 18:54:48,902 - HTTP Request: POST https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans "HTTP/2 201 Created"
+2026-02-07 18:55:08,668 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?select=credits_remaining&id=eq.5fd52c37-f89a-431e-8621-527ea346eb02 "HTTP/2 200 OK"
+2026-02-07 19:06:51,801 - Free Scan: 0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39
+2026-02-07 19:07:09,558 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans?select=%2A&user_id=eq.5fd52c37-f89a-431e-8621-527ea346eb02&contract_address=eq.0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39 "HTTP/2 200 OK"
+2026-02-07 19:07:09,558 - User 5fd52c37-f89a-431e-8621-527ea346eb02 re-scanning 0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39. No charge.
+2026-02-07 21:31:41,823 - Free Scan: 0x6982508145454Ce325dDbE47a25d4ec3d2311933
+2026-02-07 21:31:49,629 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans?select=%2A&user_id=eq.cf97717b-6b77-4d47-9a22-5f95ba2e9d63&contract_address=eq.0x6982508145454Ce325dDbE47a25d4ec3d2311933 "HTTP/2 200 OK"
+2026-02-07 21:31:49,995 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?select=%2A&id=eq.cf97717b-6b77-4d47-9a22-5f95ba2e9d63 "HTTP/2 200 OK"
+2026-02-07 21:31:50,435 - HTTP Request: PATCH https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?id=eq.cf97717b-6b77-4d47-9a22-5f95ba2e9d63 "HTTP/2 200 OK"
+2026-02-07 21:31:50,721 - HTTP Request: POST https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans "HTTP/2 201 Created"
+2026-02-07 21:32:05,891 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?select=credits_remaining&id=eq.cf97717b-6b77-4d47-9a22-5f95ba2e9d63 "HTTP/2 200 OK"
+2026-02-07 21:39:09,319 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans?select=%2A&user_id=eq.cf97717b-6b77-4d47-9a22-5f95ba2e9d63&contract_address=eq.0x6982508145454Ce325dDbE47a25d4ec3d2311933 "HTTP/2 200 OK"
+2026-02-07 21:39:09,319 - User cf97717b-6b77-4d47-9a22-5f95ba2e9d63 re-scanning 0x6982508145454Ce325dDbE47a25d4ec3d2311933. No charge.
+2026-02-07 21:40:09,943 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans?select=%2A&user_id=eq.cf97717b-6b77-4d47-9a22-5f95ba2e9d63&contract_address=eq.0x6982508145454Ce325dDbE47a25d4ec3d2311933 "HTTP/2 200 OK"
+2026-02-07 21:40:09,943 - User cf97717b-6b77-4d47-9a22-5f95ba2e9d63 re-scanning 0x6982508145454Ce325dDbE47a25d4ec3d2311933. No charge.
+2026-02-07 22:09:07,253 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans?select=%2A&user_id=eq.5736eda4-34dc-4347-9c96-da8492394088&contract_address=eq.0x6982508145454Ce325dDbE47a25d4ec3d2311933 "HTTP/2 200 OK"
+2026-02-07 22:09:07,668 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?select=%2A&id=eq.5736eda4-34dc-4347-9c96-da8492394088 "HTTP/2 200 OK"
+2026-02-07 22:09:08,018 - HTTP Request: PATCH https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?id=eq.5736eda4-34dc-4347-9c96-da8492394088 "HTTP/2 200 OK"
+2026-02-07 22:09:08,472 - HTTP Request: POST https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans "HTTP/2 201 Created"
+2026-02-07 22:09:24,572 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?select=credits_remaining&id=eq.5736eda4-34dc-4347-9c96-da8492394088 "HTTP/2 200 OK"
+2026-02-07 22:10:45,203 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans?select=%2A&user_id=eq.5736eda4-34dc-4347-9c96-da8492394088&contract_address=eq.0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 "HTTP/2 200 OK"
+2026-02-07 22:10:45,552 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?select=%2A&id=eq.5736eda4-34dc-4347-9c96-da8492394088 "HTTP/2 200 OK"
+2026-02-07 22:10:45,901 - HTTP Request: PATCH https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?id=eq.5736eda4-34dc-4347-9c96-da8492394088 "HTTP/2 200 OK"
+2026-02-07 22:10:46,250 - HTTP Request: POST https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans "HTTP/2 201 Created"
+2026-02-07 22:11:05,815 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?select=credits_remaining&id=eq.5736eda4-34dc-4347-9c96-da8492394088 "HTTP/2 200 OK"
+2026-02-07 22:12:08,037 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans?select=%2A&user_id=eq.5736eda4-34dc-4347-9c96-da8492394088&contract_address=eq.0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2 "HTTP/2 200 OK"
+2026-02-07 22:12:08,354 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?select=%2A&id=eq.5736eda4-34dc-4347-9c96-da8492394088 "HTTP/2 200 OK"
+2026-02-07 22:12:08,370 - DB Error: 402: No credits left.
+2026-02-07 22:12:27,337 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?select=credits_remaining&id=eq.5736eda4-34dc-4347-9c96-da8492394088 "HTTP/2 200 OK"
+2026-02-07 22:12:33,776 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans?select=%2A&user_id=eq.5736eda4-34dc-4347-9c96-da8492394088&contract_address=eq.0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2 "HTTP/2 200 OK"
+2026-02-07 22:12:34,100 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?select=%2A&id=eq.5736eda4-34dc-4347-9c96-da8492394088 "HTTP/2 200 OK"
+2026-02-07 22:12:34,116 - DB Error: 402: No credits left.
+2026-02-07 22:12:37,992 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans?select=%2A&user_id=eq.5736eda4-34dc-4347-9c96-da8492394088&contract_address=eq.0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2 "HTTP/2 200 OK"
+2026-02-07 22:12:38,398 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?select=%2A&id=eq.5736eda4-34dc-4347-9c96-da8492394088 "HTTP/2 200 OK"
+2026-02-07 22:12:38,401 - DB Error: 402: No credits left.
+2026-02-07 22:12:40,935 - Free Scan: 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+2026-02-07 22:16:28,565 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans?select=%2A&user_id=eq.5736eda4-34dc-4347-9c96-da8492394088&contract_address=eq.0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2 "HTTP/2 200 OK"
+2026-02-07 22:16:28,868 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?select=%2A&id=eq.5736eda4-34dc-4347-9c96-da8492394088 "HTTP/2 200 OK"
+2026-02-07 22:16:48,381 - Free Scan: 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+2026-02-07 22:17:31,713 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans?select=%2A&user_id=eq.5736eda4-34dc-4347-9c96-da8492394088&contract_address=eq.0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 "HTTP/2 200 OK"
+2026-02-07 22:18:07,135 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/user_scans?select=%2A&user_id=eq.5736eda4-34dc-4347-9c96-da8492394088&contract_address=eq.0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2 "HTTP/2 200 OK"
+2026-02-07 22:18:07,445 - HTTP Request: GET https://jwirocgoijopkipezlxw.supabase.co/rest/v1/profiles?select=%2A&id=eq.5736eda4-34dc-4347-9c96-da8492394088 "HTTP/2 200 OK"

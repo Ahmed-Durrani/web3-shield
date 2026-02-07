@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Web3 Shield - Smart Contract Auditor",
+  "version": "1.0",
+  "description": "AI-powered smart contract risk analysis.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": [
+  "*://etherscan.io/*",
+  "http://127.0.0.1/*",
+  "http://localhost/*"
+],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}
