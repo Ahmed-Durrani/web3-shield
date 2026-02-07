@@ -194,16 +194,23 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";  con
             )}
 
             <button
-  onClick={() => {
+            type="button" // <--- CHANGE 1: Prevents form submission behavior
+  onClick={(e) => {
+    e.preventDefault(); // <--- CHANGE 2: Double protection against reloads
+    
+    // Debugging: Check if the click is actually registering
+    console.log("Button clicked. Mode:", mode, "User:", user); 
+
     // Logic: If in "Deep Audit" mode AND not logged in -> Go to Login
     if (mode !== "free" && !user) {
+      console.log("Redirecting to login..."); // Debug log
       router.push("/login"); 
     } else {
-      // Otherwise -> Run the scan
       handleScan();
     }
   }}
   disabled={loading}
+
   className={`w-full py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-2 ${
     mode === "free"
       ? "bg-cyan-600 hover:bg-cyan-500 text-white"
