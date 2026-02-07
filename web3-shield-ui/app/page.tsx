@@ -196,14 +196,10 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";  con
             type="button" // <--- CHANGE 1: Prevents form submission behavior
   onClick={(e) => {
     e.preventDefault(); // <--- CHANGE 2: Double protection against reloads
-    
-    // Debugging: Check if the click is actually registering
-    console.log("Button clicked. Mode:", mode, "User:", user); 
 
     // Logic: If in "Deep Audit" mode AND not logged in -> Go to Login
     if (mode !== "free" && !user) {
-      console.log("Redirecting to login..."); // Debug log
-      router.push("/login"); 
+      setShowLogin(true); // Debug log
     } else {
       handleScan();
     }
