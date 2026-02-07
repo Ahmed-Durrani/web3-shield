@@ -7,8 +7,6 @@ import { supabase } from "../lib/supabaseClient";
 import LoginModal from "../components/LoginModal";
 import { useRouter } from 'next/navigation'; // Import this
 
-export default function Scanner() {
-  const router = useRouter(); // Initialize this
   // ... rest of your code
 
 // --- 1. MAIN PAGE COMPONENT ---
@@ -20,7 +18,8 @@ export default function Home() {
   const [error, setError] = useState("");
   const [licenseKey, setLicenseKey] = useState("");
   const [showLimitPopup, setShowLimitPopup] = useState(false);
-  
+    const router = useRouter(); // Initialize this
+
   // AUTH STATE
   const [user, setUser] = useState<any>(null);
   const [credits, setCredits] = useState<number | null>(null); // Null means "Loading..."
