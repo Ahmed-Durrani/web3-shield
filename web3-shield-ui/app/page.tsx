@@ -5,6 +5,11 @@ import { Shield, Lock, Search, AlertTriangle, CheckCircle, ExternalLink, Cpu, Za
 import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "../lib/supabaseClient";
 import LoginModal from "../components/LoginModal";
+import { useRouter } from 'next/navigation'; // Import this
+
+export default function Scanner() {
+  const router = useRouter(); // Initialize this
+  // ... rest of your code
 
 // --- 1. MAIN PAGE COMPONENT ---
 export default function Home() {
@@ -188,9 +193,41 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";  con
               </motion.div>
             )}
 
-            <button onClick={handleScan} disabled={loading} className={`w-full py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-2 ${mode === "free" ? "bg-cyan-600 hover:bg-cyan-500 text-white" : (user && credits && credits > 0) ? "bg-gradient-to-r from-emerald-600 to-teal-500 text-white shadow-emerald-900/20 shadow-lg" : "bg-gradient-to-r from-amber-600 to-orange-600 text-white"}`}>
-              {loading ? <>Analyzing Blockchain...</> : mode === "free" ? "Run Quick Scan" : !user ? <>Sign In to Scan <User size={18} /></> : (credits && credits > 0) ? <>Use Free Deep Audit ({credits} left) <Sparkles size={18} className="text-yellow-300" /></> : "Initialize Deep Audit"}
-            </button>
+            <button
+  onClick={() => {
+    // Logic: If in "Deep Audit" mode AND not logged in -> Go to Login
+    if (mode !== "free" && !user) {
+      router.push("/login"); 
+    } else {
+      // Otherwise -> Run the scan
+      handleScan();
+    }
+  }}
+  disabled={loading}
+  className={`w-full py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-2 ${
+    mode === "free"
+      ? "bg-cyan-600 hover:bg-cyan-500 text-white"
+      : user && credits && credits > 0
+      ? "bg-gradient-to-r from-emerald-600 to-teal-500 text-white shadow-emerald-900/20 shadow-lg"
+      : "bg-gradient-to-r from-amber-600 to-orange-600 text-white"
+  }`}
+>
+  {loading ? (
+    <>Analyzing Blockchain...</>
+  ) : mode === "free" ? (
+    "Run Quick Scan"
+  ) : !user ? (
+    <>
+      Sign In to Scan <User size={18} />
+    </>
+  ) : credits && credits > 0 ? (
+    <>
+      Use Free Deep Audit ({credits} left) <Sparkles size={18} className="text-yellow-300" />
+    </>
+  ) : (
+    "Initialize Deep Audit"
+  )}
+</button>
           </div>
 
           {error && <div className="mt-6 p-4 bg-red-950/30 border border-red-900/50 rounded-xl text-red-400 flex items-center gap-3"><AlertTriangle /> {error}</div>}
