@@ -183,48 +183,16 @@ def analyze_with_gemini_raw(contract_name, source_code, deployer_report=""):
     headers = {'Content-Type': 'application/json'}
     safe_code = source_code[:15000] # Increased limit slightly
     
-    prompt_text = f"""
-    You are 'Web3 Shield', a Senior Smart Contract Auditor.
+    prompt_template = os.getenv("SYSTEM_PROMPT")
     
-    CONTEXT:
-    {deployer_report}
-
-    Analyze the Solidity code for '{contract_name}'.
-
-    ### 🚨 FORMATTING RULES (CRITICAL):
-    * **DO NOT** use Markdown tables (no `|` or `---` lines).
-    * Use **Bullet Points** and **Bold Keys** for lists.
-    * Example: "* **Severity:** High" instead of a table row.
-    * Keep descriptions concise to fit in PDF reports.
-
-    ### 🚨 SCORING RULES:
-    * **DO NOT** flag standard features (like `Ownable`, `mint`, `pause`) as CRITICAL.
-    * **ONLY** flag "CRITICAL" if there is an **UNCHECKED** power (e.g., infinite minting, 100% tax).
-
-    ### 🛡️ AUDIT VERDICT: [SAFE / CAUTION / CRITICAL RISK / INCOMPLETE]
-    (Choose ONE. Be realistic.)
-
-    ---
-
-    ### 🕵️‍♂️ DEPLOYER INTEL
-    (Summarize the deployer report provided above in 2-3 bullet points.)
-
-    ### 🧠 SMART CONTRACT INTELLIGENCE
-    * **Type:** (e.g., Standard ERC20, Tax Token, Governance)
-    * **Capabilities:** (e.g., "Minting enabled", "Trading pausable")
-    * **Ownership:** (e.g., "Renounced" or "Active Admin")
-
-    ### 💰 GAS OPTIMIZATION
-    * (Tip 1 - Technical & Specific)
-    * (Tip 2)
-    * (Tip 3)
-
-    ### 🚨 THREAT DETECTION
-    (Focus on EXPLOITS, not FEATURES. If code is standard, say "✅ No Critical Vulnerabilities Found.")
-
-    Code snippet:
-    {safe_code}
-    """
+    if not prompt_template:
+        prompt_template = "Analyze the contract {contract_name}. Code: {safe_code}"
+    
+    prompt_text = prompt_template.format(
+    deployer_report=deployer_report,
+    contract_name=contract_name,
+    safe_code=safe_code
+    )
     
     data = {"contents": [{"parts": [{"text": prompt_text}]}]}
     for model in candidates:
